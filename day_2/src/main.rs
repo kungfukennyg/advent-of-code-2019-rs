@@ -73,7 +73,7 @@ fn part_one(input: &Vec<u32>) {
 }
 
 fn part_two(input: &Vec<u32>) {
-    let const DESIRED = 19690720;
+    const DESIRED: u32 = 19690720;
     for noun in 0..100 {
         for verb in 0..100 {
             let mut cpu = Cpu::new(input);
