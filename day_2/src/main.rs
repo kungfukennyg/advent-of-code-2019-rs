@@ -73,7 +73,7 @@ fn part_one(input: &Vec<u32>) {
 }
 
 fn part_two(input: &Vec<u32>) {
-    let desired = 19690720;
+    let const DESIRED = 19690720;
     for noun in 0..100 {
         for verb in 0..100 {
             let mut cpu = Cpu::new(input);
@@ -84,7 +84,7 @@ fn part_two(input: &Vec<u32>) {
                 cpu.run();
             }
 
-            if cpu.read(0) == desired {
+            if cpu.read(0) == DESIRED {
                 println!("{}", 100 * noun + verb);
                 return;
             }
